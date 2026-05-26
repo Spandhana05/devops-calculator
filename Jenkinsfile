@@ -6,7 +6,7 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('spandhana-dockerhub-creds') 
         
         // 2. Change 'YOUR_DOCKERHUB_USERNAME' to your real DockerHub username
-        DOCKER_IMAGE = "YOUR_DOCKERHUB_USERNAME/devops-calculator"  
+        DOCKER_IMAGE = "spandhana05/devops-calculator"  
         
         IMAGE_TAG = "${BUILD_NUMBER}"
         NAMESPACE = "spandhana-ns"  
@@ -16,7 +16,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // 3. Change to your public GitHub Repository URL
-                git url: 'https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git', 
+                git url: 'https://github.com/spandhana05/devops-calculator.git', 
                     branch: 'main'
             }
         }
